@@ -91,6 +91,19 @@
         toggleArrow.innerHTML = "Hide HUD ▲";
       }
     }
+    
+    window.addEventListener('load', e => {
+        registerSW();
+        function registerSW() { 
+            if ('serviceWorker' in navigator) { 
+                try {
+                    navigator.serviceWorker.register("sw.js"); 
+                } catch (e) {
+                    alert('ServiceWorker registration failed. Sorry about that.'); 
+                }
+            }
+        }
+    });
   </script>
 </body>
 
