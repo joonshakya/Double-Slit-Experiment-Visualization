@@ -39,10 +39,10 @@ function setup() {
   txtStd = height / 18;
 
   easycam = createEasyCam();
-  // easycam = new Dw.EasyCam(this._renderer, {
-  //   distance: height,
-  //   rotation: [0.793, 0.518, 0.200, -0.247]
-  // });
+  easycam = new Dw.EasyCam(this._renderer, {
+    distance: height,
+    rotation: [0.793, 0.518, 0.200, -0.247]
+  });
 
   // textFont(txtFont);
   textSize(txtStd * 0.9);
