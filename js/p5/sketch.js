@@ -37,17 +37,18 @@ function setup() {
   pixelDensity(pixelDensity() * 0.75);
   forthHeight = height / 4;
   txtStd = height / 18;
+  ratio = min(height/width, width/height)*1250
 
   easycam = createEasyCam();
   easycam = new Dw.EasyCam(this._renderer, {
-    distance: height,
-    rotation: [0.793, 0.518, 0.200, -0.247]
+    distance: ratio,
+    rotation: [0.887, 0.397, -0.158, 0.167]
   });
 
   // textFont(txtFont);
   textSize(txtStd * 0.9);
   textAlign(CENTER, CENTER);
-
+  
   calculateWaves();
 }
 
@@ -104,36 +105,36 @@ function draw() {
   if (firstSlit && secondSlit) {
     push();
     translate(-canvW*2/3 - 5, 0, 0);
-    plane(canvW*2/3 - 5, 100);
+    box(canvW*2/3 - 5, 100, 4);
     pop();
     push();
     translate(0, 0, 0);
-    plane(canvW*2/3 - 5, 100);
+    box(canvW*2/3 - 5, 100, 4);
     pop();
     push();
     translate(canvW*2/3 + 5, 0, 0);
-    plane(canvW*2/3 - 5, 100);
+    box(canvW*2/3 - 5, 100, 4);
     pop();
   } else if (firstSlit) {
     push();
     translate(-canvW*2/3 - 5, 0, 0);
-    plane(canvW*2/3 - 5, 100);
+    box(canvW*2/3 - 5, 100, 4);
     pop();
     push();
     translate(canvW/3 + 2.5, 0, 0);
-    plane(canvW*4/3 - 1.25, 100);
+    box(canvW*4/3 - 1.25, 100, 4);
     pop();
   } else if (secondSlit) {
     push();
     translate(canvW*2/3 + 5, 0, 0);
-    plane(canvW*2/3 - 5, 100);
+    box(canvW*2/3 - 5, 100, 4);
     pop();
     push();
     translate(-canvW/3 - 2.5, 0, 0);
-    plane(canvW*4/3 - 1.25, 100);
+    box(canvW*4/3 - 1.25, 100, 4);
     pop();
   } else {
-    plane(canvW*2, 100);
+    box(canvW*2, 100, 4);
   }
   pop();
 
