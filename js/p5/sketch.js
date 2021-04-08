@@ -37,7 +37,7 @@ function setup() {
   pixelDensity(pixelDensity() * 0.75);
   forthHeight = height / 4;
   txtStd = height / 18;
-  ratio = min(height/width, width/height)*1250
+  ratio = min(height/width, width/height)*1000
 
   easycam = createEasyCam();
   easycam = new Dw.EasyCam(this._renderer, {
