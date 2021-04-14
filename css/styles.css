@@ -1,10 +1,15 @@
+html {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0.05);
+}
+
 html,
 body {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   font-family: Helvetica, Arial, sans-serif;
-  background: rgb(51, 51, 51);
+  background: #333333;
 }
 
 canvas {
@@ -18,7 +23,6 @@ canvas {
 #HUD {
   -webkit-touch-callout: none;
   -webkit-user-select: none;
-  -khtml-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
@@ -27,6 +31,7 @@ canvas {
   top: 10px;
   left: 10px;
   color: #fff;
+  -webkit-transition: all .5s;
   transition: all .5s;
 }
 
@@ -41,10 +46,6 @@ canvas {
 #HUD table td {
   min-width: 6rem;
 }
-
-// #HUD table td:nth-child(2) {
-//   padding: 4px 4px 4px 24px;
-// }
 
 .button {
   background-color: #333;
@@ -61,9 +62,15 @@ canvas {
 }
 
 .drop {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .drop:after {
@@ -96,6 +103,8 @@ canvas {
 
 #toggleHUD {
   padding: 4px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   position: absolute;
 }
@@ -112,10 +121,10 @@ canvas {
 }
 
 #HUD.hidden {
-  transform: translateY(calc(-100% - 10px));
+  -webkit-transform: translateY(calc(-100% - 10px));
+          transform: translateY(calc(-100% - 10px));
 }
 
-// Toggle switch
 .switch {
   position: relative;
   display: inline-block;
@@ -123,7 +132,7 @@ canvas {
   height: 17px;
 }
 
-.switch input { 
+.switch input {
   opacity: 0;
   width: 0;
   height: 0;
@@ -154,16 +163,16 @@ canvas {
 }
 
 input:checked + .slider {
-  background-color: rgb(48, 209, 88);
+  background-color: #30d158;
 }
 
 input:focus + .slider {
-  box-shadow: 0 0 1px rgb(48, 209, 88);
+  -webkit-box-shadow: 0 0 1px #30d158;
+          box-shadow: 0 0 1px #30d158;
 }
 
 input:checked + .slider:before {
   -webkit-transform: translateX(13px);
-  -ms-transform: translateX(13px);
   transform: translateX(13px);
 }
 
@@ -175,3 +184,4 @@ input:checked + .slider:before {
 .slider.round:before {
   border-radius: 50%;
 }
+/*# sourceMappingURL=styles.css.map */

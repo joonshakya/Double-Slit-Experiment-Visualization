@@ -1,3 +1,7 @@
+html {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0.05);
+}
+
 html,
 body {
   margin: 0;
@@ -177,4 +181,4 @@ input:checked + .slider:before {
 .slider.round:before {
   border-radius: 50%;
 }
-/*# sourceMappingURL=style2.css.map */
+/*# sourceMappingURL=combination.css.map */
